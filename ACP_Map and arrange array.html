@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript Array Map and Arrange</h2>
+    <p>The map() method creates a new array populated with the results of calling a provided function on every element in the calling array.</p>
+    <button onclick="ascendingorder()">Click me</button>
+    <button onclick="descendingorder()">Click me</button>
+    <p id="result"></p>
+    <script>
+        function ascendingorder() {
+            var numbers = [5, 3, 8, 1, 2];
+            var sorted = numbers.sort(function(a, b) {
+                return a - b;
+            });
+            document.getElementById("result").innerHTML = sorted;
+        }
+        function descendingorder() {
+            var numbers = [5, 3, 8, 1, 2];
+            var sorted = numbers.sort(function(a, b) {
+                return b - a;
+            });
+            document.getElementById("result").innerHTML = sorted;
+        }
+    </script>
+</body>
+</html>

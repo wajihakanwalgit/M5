@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript Error Handling</h2>
+    <p>Click the button to see error handling in action.</p>
+    <button onclick="handleError()">Click me</button>
+    <p id="result"></p>
+    <script>
+        function handleError() {
+            try {
+                
+                var result = riskyFunction();
+                document.getElementById("result").innerHTML = "Result: " + result;
+            } catch (error) {
+                
+                document.getElementById("result").innerHTML = "Error: " + error.message;
+            }
+        }
+        function riskyFunction() {
+            
+        
+            return undefinedVariable + 10; 
+        }
+
+    </script>
+</body>
+</html>

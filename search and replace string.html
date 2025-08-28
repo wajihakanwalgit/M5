@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript Search and Replace</h2>
+    <p>Click the button to see search and replace in action.</p>
+    <button onclick="searchAndReplace()">Click me</button>
+    <p id="result"></p>
+    <script>
+        function searchAndReplace() {
+            var str = "Hello, world!";
+            var search = "world";
+            var replace = "JavaScript";
+            var newStr = str.replace(search, replace);
+            document.getElementById("result").innerHTML = newStr;
+        }
+        function replaceAllOccurrences() {
+            var str = "Hello, world! Welcome to the world of JavaScript.";
+            var search = /world/g; 
+            var replace = "universe";
+            var newStr = str.replace(search, replace);
+            document.getElementById("result").innerHTML = newStr;
+        }
+    </script>
+</body>
+</html>

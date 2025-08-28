@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript Array Map</h2>
+    <p>The map() method creates a new array populated with the results of calling a provided function on every element in the calling array.</p>
+    <button onclick="mapFunction()">Click me</button>
+    <p id="result"></p>
+    <script>
+        function mapFunction() {
+            var numbers = [1, 2, 3, 4, 5];
+            var doubled = numbers.map(function(x) {
+                return x * 2;
+            });
+            document.getElementById("result").innerHTML = doubled;
+        }
+    </script>
+</body>
+</html>

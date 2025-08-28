@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Class with Static and Instance Methods</h1>  
+    <script>
+        class Car {
+            constructor(brand, model, year) {
+                this.brand = brand;
+                this.model = model;
+                this.year = year;
+            }
+
+            static info() {
+                return "Cars are vehicles that run on roads.";
+            }
+
+            details() {
+                return this.brand + " " + this.model + " (" + this.year + ")";
+            }
+        }
+
+        var car1 = new Car("Toyota", "Corolla", 2020);
+        var car2 = new Car("Honda", "Civic", 2019);
+
+        document.writeln(Car.info() + "<br>");
+        document.writeln("Car 1: " + car1.details() + "<br>");
+        document.writeln("Car 2: " + car2.details() + "<br>");
+
+        class Honda extends Car {
+            constructor(model, year) {
+                super("Honda", model, year);
+            }
+            static hondaInfo() {
+                return "Honda is a Japanese car manufacturer.";
+            }
+            details() {
+                return super.details();
+            }
+        }
+        let myCar = new Honda("Accord", 2020);
+        document.writeln("My Car: " + myCar.details() + "<br>");
+        document.writeln(Honda.hondaInfo() + "<br>");
+        
+    </script>
+</body>
+</html>

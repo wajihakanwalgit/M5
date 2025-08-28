@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript Async/Await Example</h2>
+    <p>Click the button to see async/await in action.</p>
+    <button onclick="executeAsync()">Click me</button>
+    <p id="result"></p>
+    <script>
+        async function executeAsync() {
+            try {
+                const result = await createPromise();
+                document.getElementById("result").innerHTML = result;
+            } catch (error) {
+                document.getElementById("result").innerHTML = "Error: " + error.message;
+            }
+        }
+
+        function createPromise() {
+            return new Promise(function(resolve, reject) {
+                setTimeout(function() {
+                    var success = true;
+                    if (success) {
+                        resolve("Promise resolved successfully!");
+                    } else {
+                        reject(new Error("Promise rejected."));
+                    }
+                }, 1000);
+            });
+        }
+    </script>
+</body>
+</html>

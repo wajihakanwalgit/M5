@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Class Example</h1>
+    <script>
+        class Person {
+            constructor(firstname, lastname, age) {
+                this.firstname = firstname;
+                this.lastname = lastname;
+                this.age = age;
+            }
+
+            fullName() {
+                return this.firstname + " " + this.lastname;
+            }
+        }
+
+        var person1 = new Person("John", "Doe", 30);
+        var person2 = new Person("Jane", "Smith", 25);
+
+        document.writeln("Person 1: " + person1.fullName() + "<br>");
+        document.writeln("Person 2: " + person2.fullName() + "<br>");
+    </script>
+</body>
+</html>

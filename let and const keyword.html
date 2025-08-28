@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript let and const</h1>
+    <script>
+        var c = 30;
+        document.writeln("The value of c is " + c + "<br>");
+        var c = 40; // Redeclaring 'c' with var
+        document.writeln("The new value of c is " + c + "<br>");
+        let a = 10;
+        const b = 20;
+        document.writeln("The value of a is " + a + "<br>");
+        document.writeln("The value of b is " + b + "<br>");
+        a = 15; // Reassigning the value of 'a'
+        document.writeln("The new value of a is " + a + "<br>");
+        // b = 25; // This will cause an error because 'b' is a constant
+        // document.writeln("The new value of b is " + b + "<br>"); // Uncommenting this line will throw an error
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript Callback Functions</h2>
+    <p>Click the button to see a callback function in action.</p>
+    <button onclick="executeCallback()">Click me</button>
+    <p id="result"></p>
+    <script>
+        function executeCallback() {
+            callbackFunction("Hello, World!", function(message) {
+                document.getElementById("result").innerHTML = message;
+            });
+        }
+
+        function callbackFunction(message, callback) {
+            // Simulate an asynchronous operation
+            setTimeout(function() {
+                callback(message);
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

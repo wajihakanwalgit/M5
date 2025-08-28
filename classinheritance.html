@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Class Inheritance Example</h1>
+    <script>
+        class Person {
+            constructor(firstname, lastname, age) {
+                this.firstname = firstname;
+                this.lastname = lastname;
+                this.age = age;
+            }
+
+            fullName() {
+                return this.firstname + " " + this.lastname;
+            }
+        }
+
+        class Employee extends Person {
+            constructor(firstname, lastname, age, jobTitle) {
+                super(firstname, lastname, age);
+                this.jobTitle = jobTitle;
+            }
+
+            getDetails() {
+                return this.fullName() + ", Age: " + this.age + ", Job Title: " + this.jobTitle;
+            }
+        }
+
+        var employee1 = new Employee("John", "Doe", 30, "Software Engineer");
+        var employee2 = new Employee("Jane", "Smith", 25, "Project Manager");
+
+        document.writeln("Employee 1: " + employee1.getDetails() + "<br>");
+        document.writeln("Employee 2: " + employee2.getDetails() + "<br>");
+    </script>
+</body>
+</html>
